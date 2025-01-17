@@ -1,0 +1,370 @@
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  height: 100%;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+:root {
+  --main-color: #ffda2a;
+  --bg-color: #171717;
+  --main-text-color: rgb(255, 255, 255);
+}
+ul, ol, li {
+  list-style-type: none;}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: normal;
+}
+a:focus {
+  outline: none;
+}
+img {
+  max-width: 100%;
+  height: inherit;
+  display: block;
+}
+.Header{
+  background-color: var(--bg-color);
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 120px;
+  padding: 1rem;
+  color: #b2b2b2;
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-size: 1rem;
+}
+.Header-logoWrapper{
+  width: 10%;
+}
+.Header-logo{
+  fill: var(--main-color);
+}
+.Header-nav{
+ width: 60%;
+}
+.Nav-ul{
+  display: flex;
+  flex-flow: row nowrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+.Header-ul{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: end;
+  align-items: center;
+  gap: 2rem;
+  width: 30%;
+}
+.Header-a--button{
+  background-color: var(--main-color);
+  border-radius: 80px;
+  color: var(--bg-color);
+  padding: 10px 15px;
+  font-weight: 700;
+  font-size: .875rem;
+}
+.Header-menuMovil{
+  display: none;
+}
+@media (max-width: 1000px){
+  .Nav{
+    display: none;
+  } 
+  .Header-menuMovil{
+    display: flex;
+  }
+  .Header-ul{
+   width: 50%;
+  }
+
+  
+}
+@media (max-width: 800px){
+  .Header-a{
+    display: none;
+    
+  }
+  .Header-a--button{
+    display: flex;
+  }
+}
+.Hero{
+width: 100%;  
+min-height: 100vh;
+background-image:
+url("../assets/header_desktop.jpg");
+background-repeat: no-repeat;
+ background-size: cover;
+ background-position: bottom;
+display: flex;
+flex-flow: row nowrap;
+justify-content: center;
+align-items: start;
+
+}
+.Hero-info{
+  width: 65%;
+  
+  padding-right: 20%;
+  color: var(--main-text-color);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  align-items: start;
+  gap: 2rem;
+  font-family: "Roboto", serif;
+  padding-top: 5%;
+
+}
+.Hero-span{
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 4.375rem;
+}
+.Hero-h2{
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 22px;
+  position: relative;
+  padding-left: 60px;
+}
+.Hero-h2::before {
+  content: "";
+  position: absolute;
+  left: 0; 
+  top: calc(50% - 1px); 
+  width: 50px; /* Longitud de la línea horizontal */
+  height: 2px; /* Grosor de la línea */
+  background-color: #ffffff; /* Color de la línea */
+}
+.Hero-a{
+  padding: 20px 50px;
+  background-color: var(--main-color);
+  border-radius: 4px;
+  color: var(--bg-color);
+  font-size: 1.125rem;
+  font-weight: 700;
+  line-height: 1rem;
+}
+
+@media (max-width: 1000px){
+  .Hero-info{
+    width: 100%;
+    padding-right: 0;
+    align-items: center;
+    padding-left: 1rem;
+
+  }
+}
+.Banner{
+  width: 100%;
+  background-color: var(--bg-color);
+  min-height: 400px;
+display: flex;
+flex-flow: row nowrap;
+justify-content: center;
+align-items: center;
+}
+.Banner-limiter{
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+}
+.Banner-ul{
+  margin: auto;
+  width: 80%;
+  font-size: 26px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  color: var(--main-text-color);
+  font-family: "Playfair Display", serif;
+  transition: transform 1s ease;
+
+
+}
+.BannerIsActive{
+  transform: translateY(-40px);
+}
+.Banner-li{
+  width: calc(100% / 4);
+  font-weight: 700;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  border-left: 1px solid var(--main-text-color);
+
+}
+.Banner-li:nth-child(4n + 1){
+  border-left: none;
+}
+@media (max-width: 1000px){
+  .Banner{
+    display: none;
+  }
+  
+}
+.Products{
+  width: 100%;
+}
+.Products-ul{
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1600px;
+  margin: auto;
+  
+}
+
+.Products-infoWrapper{
+  width: 70%;
+  margin: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 400px;
+
+}
+
+.Products-span--Big{
+  font-family: "Playfair Display", serif;
+  font-size: 4rem;
+  font-weight: 400;
+}
+.Products-span--Small{
+  font-family: "Roboto", serif;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+.Products-a{
+  padding: 10px 50px;
+  border-radius: 4px;
+  border: 1px solid var(--main-text-color);
+  background: rgba(0,0,0,0);
+
+}
+.Poducts-li{
+  position: relative;
+  overflow: hidden;
+  background-repeat: no-repeat;
+ background-size: cover;
+ background-position: center;
+ width: 100%; 
+ min-height: 400px;
+ color: var(--main-text-color);
+
+}
+.Poducts-li--primero{
+  background-image:
+   url("../assets/music.jpg");
+}
+.Poducts-li--segundo{
+  background-image:
+   url("../assets/sfx.jpg");
+}
+.Poducts-li--tercero{
+  background-image:
+   url("../assets/ai-face-concept-ai-generated\ \(1\).jpg");
+}
+.Poducts-li--cuarto{
+  background-image:
+   url("../assets/footage\ \(1\).jpg");
+}
+.Poducts-li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Capa oscura inicial */
+  transition: opacity 0.3s ease-in-out;
+}
+
+.ProductLiIsActive{
+  
+   color: var(--bg-color);
+}
+.ProductLiIsActive::after {
+  opacity: 0; 
+}
+@media (max-width: 1000px){
+  .Products-infoWrapper{
+    flex-flow: column;
+    justify-content: center;
+  }
+}
+.Footer{
+  width: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  color: #666666;
+  font-family: "Roboto", serif;
+  min-height: 200px;
+
+}
+.Footer-logoWrapper{
+  width: 30%;
+}
+.Footer-info{
+  width: 70%;
+  padding: 40px;
+}
+.Footer-ul{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+}
+.Footer-li{
+  display: flex;
+  flex-flow: column nowrap;
+  font-size: .875rem;
+  font-weight: 400;
+  align-items: end;
+  justify-content: start;
+}
+
+.Footer-li span:first-of-type{
+font-size: 1rem;
+font-weight: 600;
+color: #b2b2b2;
+}
+@media (max-width: 1000px){
+  .Footer-ul{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .Footer-li span{
+    display: none;
+  }
+  .Footer-li span:first-of-type{
+    display: flex;
+  }
+}
